@@ -136,11 +136,10 @@ def readInput(graph):
         print "Error";
         return;
     f = open(sys.argv[1], 'r');
-    # print f.read();
     firstLine = True;
     for line in f:
         tupl = line.split();
-        print tupl;
+        # print tupl;
         if firstLine == True:
             firstLine = False;
             graph.m_numVertices = int(tupl[0]);
@@ -149,8 +148,6 @@ def readInput(graph):
 
 
 if __name__ == '__main__':
-    print "Hello World";
     graph = Graph();
     readInput(graph);
-    graph.printGraph();
     findLeastDistance(graph,2,5);
